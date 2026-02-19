@@ -1,0 +1,77 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+const metadata = {
+  title: 'Contact - Tyler Bosford',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Header -->
+  <Fragment slot="header">
+    <Header
+      isSticky
+      actions={[
+        { variant: 'secondary', text: 'Home', href: '/' },
+        { variant: 'primary', text: 'Portfolio', href: '/#features' },
+      ]}
+    />
+  </Fragment>
+
+  <!-- Hero2 Section -->
+  <Hero2
+    tagline="Get in Touch"
+    actions={[]}
+    image={{
+      src: '~/assets/images/TylerBosford.JPG',
+      alt: 'Contact Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      Contact <span class="text-accent dark:text-white">Tyler Bosford</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        I’m available for consulting, projects, or questions. Reach out via email or phone.
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">
+        Contact Tyler | Email & Phone
+      </span>
+    </Fragment>
+  </Hero2>
+
+  <!-- Contact Information Section -->
+  <Steps2
+    title="Contact Information"
+    subtitle="You can reach me through any of the following methods."
+    callToAction={{
+      text: 'Send an Email',
+      href: 'mailto:tylebos622@gmail.com',
+    }}
+    items={[
+      {
+        title: 'Email',
+        description: 'tylebos622@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Phone',
+        description: '386-837-0258',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Follow Me',
+        description: 'linkedin.com/in/tyler-bosford',
+        icon: 'tabler:brand-linkedin',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps2>
+</Layout>

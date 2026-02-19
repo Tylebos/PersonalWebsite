@@ -1,0 +1,96 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import UCLogo from '~/assets/images/university_of_colorado.png';
+import RegentLogo from '~/assets/images/regent_university.png';
+import CCAFLogo from '~/assets/images/ccaf_logo.png';
+
+const metadata = {
+  title: 'Education - Tyler Bosford',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero2
+    tagline="Academic & Professional Growth"
+    actions={[]}
+  >
+    <Fragment slot="title">
+      Tyler Bosford <span class="text-accent dark:text-white">Education & Credentials</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Highlighting my academic journey from the Community College of the Air Force to current post-baccalaureate and graduate studies, focusing on Computer Science and Cybersecurity.
+    </Fragment>
+  </Hero2>
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Degrees & Certifications"
+    subtitle="A summary of my academic qualifications, focusing on computer science, cybersecurity, and strategic operations."
+    items={[
+      {
+        title: 'University of Colorado',
+        description: 'B.S. Computer Science (Aug 2024 – Present)',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Regent University',
+        description: 'M.S. Cybersecurity (Oct 2023)',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Regent University',
+        description: 'B.S. Information Systems Technology (May 2021)',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Community College of the Air Force',
+        description: 'A.S. Strategic Operations Management (Jan 2025)',
+        icon: 'tabler:building-bank',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    title="Academic Highlights"
+    subtitle="Some key metrics about my studies and certifications."
+    stats={[
+      { title: 'Universities Attended', amount: '3' },
+      { title: 'Degrees Earned', amount: '4' },
+      { title: 'Years of Study', amount: '8+' },
+      { title: 'Fields of Focus', amount: 'CS' },
+    ]}
+  />
+
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'View Resume',
+        href: '/Tyler_Bosford_MasterResume-2.pdf',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">Continue Exploring</Fragment>
+    <Fragment slot="subtitle">
+      Learn more about my professional experience, projects, and academic background by viewing my full resume.
+    </Fragment>
+  </CallToAction>
+</Layout>

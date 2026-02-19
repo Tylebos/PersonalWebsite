@@ -1,0 +1,126 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Technical Skills & Certifications - Tyler Bosford',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget for Technical Skills ******************* -->
+  <Hero2
+    tagline="Skills & Certifications"
+    actions={[]}
+  >
+    <Fragment slot="title">
+      Tyler Bosford — <span class="text-accent dark:text-white">Technical Skills & Certifications</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      A detailed summary of my technical expertise, certifications, and tools I’ve mastered over the years.
+    </Fragment>
+  </Hero2>
+
+  <!-- Features2 Widget for Certifications ************** -->
+  <Features2
+    title="Certifications"
+    subtitle="Professional and technical certifications I have earned or am currently pursuing."
+    items={[
+      {
+        title: 'CompTIA Security+',
+        description: '',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'PMP',
+        description: '(In Progress)',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Lean Six Sigma Green Belt / University of Colorado Internship Pathway / Foundational Earned Value Management',
+        description: '',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Special Warfare Instructor Qualification Course (SWIQC) / Application of Instructional Systems Design (ISD)',
+        description: '',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Azure Fundamentals / SOC Level 1 (TRHM)',
+        description: '(In Progress)',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Joint Terminal Attack Controller (JTAC) / JTAC Instructor / JTAC Evaluator',
+        description: '',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features2 Widget for Technical Skills ************** -->
+  <Features2
+    title="Technical Skills"
+    subtitle="Hands-on experience with programming, operating systems, tools, and security concepts."
+    items={[
+      {
+        title: 'Operating Systems & Tools',
+        description: 'Microsoft Office, Linux, Windows, Bash scripting, Git, Jira, Pytest, Ghidra, GDB, Wireshark',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Programming & Development',
+        description: 'C, C++, Python, Scala, SQL, JavaScript, React, Node.js',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Security & Cyber Concepts',
+        description: 'NIST frameworks, network monitoring, reverse engineering, cryptography, low-level systems, network fundamentals',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget Optional ****************** -->
+  <Stats
+    title="Skill Highlights"
+    subtitle="A snapshot of my technical proficiency."
+    stats={[
+      { title: 'Programming Languages', amount: '7+' },
+      { title: 'Certifications', amount: '6+' },
+      { title: 'Tools & OS', amount: '10+' },
+      { title: 'Security Focus Areas', amount: '5+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'View Resume',
+        href: '/Tyler_Bosford_MasterResume-2.pdf',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">Explore Further</Fragment>
+    <Fragment slot="subtitle">
+      For a full breakdown of my professional, technical, and academic experience, view my resume.
+    </Fragment>
+  </CallToAction>
+</Layout>
